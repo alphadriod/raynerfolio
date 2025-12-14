@@ -35,7 +35,7 @@ Check out the live site here: [https://raynerfolio.vercel.app](https://raynerfol
 1. Clone the repository, install dependencies, and start the dev server all in one go:
 
 ```bash
-git clone https://github.com/YomaAroriode/raynerfolio.git
+git clone https://github.com/alphadriod/raynerfolio.git
 cd raynerfolio
 npm install
 # or yarn install

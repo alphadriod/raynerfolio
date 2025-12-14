@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import Header from "../components/Header.astro";
+import ChristmasPopup from "../components/ChristmasPopup.astro";
 ---
 
 <!doctype html>
@@ -10,9 +11,14 @@ import Header from "../components/Header.astro";
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="generator" content={Astro.generator} />
-    <title>Yoma Aroriode</title>
+    <meta
+      name="description"
+      content="Portfolio of Rayner - A Versatile Software Engineer specializing in Frontend, Backend, and Interactive 3D Web Experiences."
+    />
+    <title>Rayner | Software Engineer & Creative Technologist</title>
   </head>
   <body class="px-3 overflow-hidden">
+    <ChristmasPopup />
     <Header />
 
     <slot />
@@ -23,5 +29,6 @@ import Header from "../components/Header.astro";
     <script src="/src/scripts/aos.js"></script>
     <script src="/src/scripts/cursor.js"></script>
     <script src="/src/scripts/themeToggle.js"></script>
+    <script src="/src/scripts/snow.js"></script>
   </body>
 </html>

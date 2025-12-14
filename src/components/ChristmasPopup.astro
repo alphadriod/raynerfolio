@@ -1,0 +1,91 @@
+---
+
+---
+
+<div
+  id="christmas-popup"
+  class="fixed inset-0 z-[100] flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-500"
+>
+  <!-- Backdrop Blur -->
+  <div
+    class="absolute inset-0 bg-black/40 backdrop-blur-sm"
+    id="popup-backdrop"
+  >
+  </div>
+
+  <!-- Card -->
+  <div
+    class="relative w-[85%] max-w-xs sm:w-full sm:max-w-sm bg-base-100 rounded-2xl shadow-2xl overflow-hidden transform scale-90 transition-transform duration-500"
+    id="popup-card"
+  >
+    <!-- Festive Header Image/Gradient -->
+    <div
+      class="h-24 bg-gradient-to-br from-rose-600 to-red-700 flex items-center justify-center relative overflow-hidden"
+    >
+      <div
+        class="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/snow.png')] opacity-20"
+      >
+      </div>
+      <div class="text-4xl animate-bounce">🎄</div>
+    </div>
+
+    <!-- Content -->
+    <div class="p-6 text-center space-y-3">
+      <h2
+        class="text-2xl font-bold bg-gradient-to-r from-rose-600 to-green-600 bg-clip-text text-transparent"
+      >
+        Season's Greetings!
+      </h2>
+      <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
+        Wishing you a holiday season filled with <span
+          class="text-rose-500 font-semibold">joy</span
+        >, <span class="text-green-600 font-semibold">peace</span>, and bug-free
+        deployments! ✨
+      </p>
+      <p class="text-xs font-medium text-primary">- Rayner</p>
+
+      <button
+        id="close-popup"
+        class="mt-2 btn btn-sm btn-primary w-full rounded-full text-white shadow-lg hover:scale-105 transition-transform"
+      >
+        Happy Holidays! 🎁
+      </button>
+    </div>
+
+    <!-- Decorative Snowflakes (CSS only) -->
+    <div class="absolute top-4 right-4 text-white/20 text-2xl animate-pulse">
+      ❄️
+    </div>
+    <div class="absolute bottom-4 left-4 text-green-500/10 text-4xl rotate-12">
+      ❄️
+    </div>
+  </div>
+</div>
+
+<script>
+  const popup = document.getElementById("christmas-popup");
+  const card = document.getElementById("popup-card");
+  const closeBtn = document.getElementById("close-popup");
+  const backdrop = document.getElementById("popup-backdrop");
+
+  // Show Popup after 1.5 seconds
+  setTimeout(() => {
+    // Show every time on refresh
+    if (popup && card) {
+      popup.classList.remove("opacity-0", "pointer-events-none");
+      card.classList.remove("scale-90");
+      card.classList.add("scale-100");
+    }
+  }, 1500);
+
+  function closePopup() {
+    if (popup && card) {
+      popup.classList.add("opacity-0", "pointer-events-none");
+      card.classList.remove("scale-100");
+      card.classList.add("scale-90");
+    }
+  }
+
+  if (closeBtn) closeBtn.addEventListener("click", closePopup);
+  if (backdrop) backdrop.addEventListener("click", closePopup);
+</script>

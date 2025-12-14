@@ -31,6 +31,7 @@ window.addEventListener("scroll", () => {
       spread: 200,
       startVelocity: 30,
       origin: { y: 0.6 },
+      colors: ["#d90429", "#2b9348", "#ffd700", "#ffffff"], // Christmas Red, Green, Gold, White
     });
   }
 });

@@ -1,7 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @import "tailwindcss";
 @plugin "daisyui" {
-  themes: cupcake --default, forest --prefersdark;
+  themes:
+    cupcake --default,
+    forest --prefersdark;
+}
+
+:root:has(input.theme-controller[value="cupcake"]:checked),
+[data-theme="cupcake"] {
+  --color-base-content: oklch(0% 0 0); /* Black text in light mode */
+  --color-primary: oklch(55% 0.2 150); /* Strong Emerald Green to match Forest vibe */
+  --color-primary-content: oklch(100% 0 0); /* White text on primary */
+}
+
+:root:has(input.theme-controller[value="forest"]:checked),
+[data-theme="forest"] {
+  --color-base-content: oklch(100% 0 0); /* White text in dark mode */
 }
 
 html {

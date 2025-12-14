@@ -1,33 +1,32 @@
 ---
 const projects = [
   {
-    title: "Crypto Portfolio Tracker",
-    subtitle: "Real-time dashboard for managing digital assets",
+    title: "Sweet Tooth Cakes & Treats",
+    subtitle:
+      "A full-featured e-commerce platform built for a high-volume bakery.",
     description:
-      "Built with React, Tailwind CSS, and Coingecko API. Allows users to track crypto prices, view portfolio performance, and analyze trends with beautiful charts. Deployed on Vercel for lightning-fast performance.",
-    image: "/assets/projects.jpg",
-    tools: ["React", "Tailwind CSS", "Coingecko API", "Chart.js"],
-    github: "https://github.com/yourusername/crypto-portfolio",
-    live: "https://crypto-portfolio.vercel.app",
+      "Designed and developed a custom e-commerce solution using WordPress and WooCommerce. I implemented custom PHP functionalities for order management and delivery scheduling, optimized the MySQL database for performance, and ensured a secure payment gateway integration. This project directly contributed to a 40% increase in the client's online sales.",
+    image: "/images/sweettooth.png", // Save your screenshot as sweettooth.png
+    tools: ["WordPress", "PHP", "WooCommerce", "MySQL"],
+    live: "https://sweettoothcakesandtreats.com/",
   },
   {
-    title: "E-Commerce Platform",
-    subtitle: "Full-stack web store with secure payments",
+    title: "Jeje Capital",
+    subtitle: "Automated Crypto Trading Bot Platform & SaaS.",
     description:
-      "An e-commerce app built with Node.js, Express, and PostgreSQL. Features include product listings, shopping cart, Stripe integration for payments, and an admin dashboard for managing inventory.",
-    image: "/assets/projects.jpg",
-    tools: ["Node.js", "Express", "PostgreSQL", "Stripe"],
-    github: "https://github.com/yourusername/ecommerce-platform",
-    live: "https://myecommerce.store",
+      "A production-ready SaaS platform for automated crypto futures trading. I architected and built the entire frontend application, including the responsive marketing site, user dashboard, and complex compounding tools. Integrated secure authentication and real-time data visualization to deliver a seamless user experience for subscribers.",
+    image: "/images/jeje.png",
+    tools: ["Next.js", "TypeScript", "Tailwind CSS", "Authentication"],
+    live: "https://jejecapital.com/",
   },
   {
     title: "Real-time Chat App",
     subtitle: "Socket.io powered messaging with authentication",
     description:
-      "A modern chat application using React and Socket.io for instant messaging, with user authentication via Firebase Auth and real-time presence indicators. Styled with DaisyUI.",
+      "Full-stack real-time messaging application. Implemented WebSocket connections for instant communication, Firebase Authentication for secure user sessions, and a responsive UI. This project highlights my understanding of backend event-driven architecture.",
     image: "/assets/projects.jpg",
-    tools: ["React", "Socket.io", "Firebase", "DaisyUI"],
-    github: "https://github.com/yourusername/chat-app",
+    tools: ["React", "Socket.io", "Firebase", "Node.js"],
+    // github: "https://github.com/alphadriod/chat-app", // TODO: Add real link
     live: "https://mychatapp.netlify.app",
   },
 ];
@@ -41,7 +40,7 @@ const projects = [
     projects.map((project, index) => {
       return (
         <div
-          class={`items-center gap-20 md:gap-32 grid md:grid-cols-2 ${
+          class={`items-center gap-10 md:gap-32 grid md:grid-cols-2 ${
             index % 2 !== 0 ? "md:[&>*:first-child]:order-2" : ""
           }`}
           data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
@@ -52,7 +51,7 @@ const projects = [
             <p class="mb-4 text-gray-500 leading-relaxed">
               {project.description}
             </p>
-            <div class="flex flex-wrap gap-2">
+            <div class="flex flex-wrap gap-2 cursor-pointer">
               {project.tools.map((tool) => (
                 <span class="border-primary badge-outline badge">{tool}</span>
               ))}
@@ -65,7 +64,7 @@ const projects = [
                 src={project.image}
                 alt={project.title}
                 loading="lazy"
-                class="shadow-lg rounded-2xl w-full max-w-md object-cover hover:scale-105 transition duration-300 ease-in-out"
+                class="shadow-lg rounded-2xl w-full max-w-md h-full object-cover hover:scale-105 transition duration-300 ease-in-out"
               />
             </a>
           </div>
@@ -77,7 +76,7 @@ const projects = [
   <!-- See More -->
   <div class="mt-12 text-center">
     <a
-      href="https://github.com/YomaAroriode"
+      href="https://github.com/alphadriod"
       target="_blank"
       class="inline-block px-6 py-2 rounded-field btn-outline font-semibold hover:scale-105 transition-transform duration-200 ease-in-out btn btn-primary"
     >
